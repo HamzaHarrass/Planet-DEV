@@ -1,10 +1,8 @@
 # Planet-DEV
-Contexte du projet
-Planet.DEV est une communauté de développeurs qui se réunissent autour de la découverte et de l'exploration de l'actualité du développement.
+Contexte du projet:
 
-La première phase du projet est de réaliser un dashboard admin qui permettra de gérer les contenus des actualités du veille technologie.
-
-​
+ Planet.DEV est une communauté de développeurs qui se réunissent autour de la découverte et de l'exploration de l'actualité du développement.
+ La première phase du projet est de réaliser un dashboard admin qui permettra de gérer les contenus des actualités du veille technologie.
 
 Exigences Fonctionnelles :
 
@@ -17,7 +15,7 @@ L'admin peut rechercher sur des articles (stack ou catégorie par exemple) et fa
 Exigences Technologiques :
 
 Concepts: Responsivité, POO
-**Conception et modélisation: **UML (diagramme de classe et usecase)
+Conception et modélisation: **UML (diagramme de classe et usecase)
 Langages de programmation: JavaScript,html, CSS, PHP
 Framework & bibliothèque: Bootstrap / TailwindCSS
 SGBD: MySQL
