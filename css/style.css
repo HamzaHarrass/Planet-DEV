@@ -1,0 +1,11 @@
+body{
+    background: radial-gradient(circle, #FB2576 6%, #3F0071 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
