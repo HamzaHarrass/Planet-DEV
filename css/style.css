@@ -1,5 +1,6 @@
+
 body{
-    background: radial-gradient(circle, #FB2576 6%, #3F0071 100%);
+    background-color: #000000;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -8,4 +9,14 @@ body{
     padding: 0;
     overflow-x: hidden;
 }
-
+.style-modal{
+    background: rgb(251,37,118);
+    background: linear-gradient(333deg, #3f0071 35%, #ffffff 100%);
+}
+h6{
+    justify-content: center;
+    color: wheat;
+    display: flex;
+    position: absolute;
+    right: 45%;
+}
