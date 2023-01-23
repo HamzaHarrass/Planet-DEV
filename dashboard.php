@@ -38,9 +38,10 @@ if(!isset($_SESSION["id"])){
 
 <!-- <div><a href="logout.php" class="btn btn-danger">Logout</a></div> -->
 <div class="container float mt-4 text-end">
-    <a id="show-button"  data-bs-toggle="modal" data-bs-target="#Modal" class="btn btn-primary"><i class="bi bi-folder-plus"></i>Add</a>
-    </div>
+  <a id="show-button" onClick="hideBtnEdit()"  data-bs-toggle="modal" data-bs-target="#Modal" class="btn btn-primary"><i class="bi bi-folder-plus"></i>Add</a>
+</div>
 
+<div id="alert" class="m-5"></div>
 
 <div class="container float mt-5">
 <table class="table table-striped table-dark mx-auto ">
@@ -62,8 +63,8 @@ if(!isset($_SESSION["id"])){
         echo "<td>".$row["name"]."</td>";
         echo "<td>".$row["author"]."</td>";
         echo "<td>".$row["content"]."</td>";
-        echo "<td><a id=".$row["id"]." onClick='edit(this);hidden()' data-bs-toggle='modal' data-bs-target='#Modal' class=' btn btn-primary'>Edit</a></td>";
-        echo "<td><button id=".$row["id"]." name='delete_btn' class='btn btn-danger'>Delete</button></td>";
+        echo "<td><a id=".$row["id"]." onClick='edit(this)' data-bs-toggle='modal' data-bs-target='#Modal' class=' btn btn-primary'>Edit</a></td>";
+        echo "<td><button id=".$row["id"]." name='delete_btn' onClick='remove(this)' class='btn btn-danger'>Delete</button></td>";
         echo "<td><a 'id=".$row["id"]."' class='btn btn-success'>View</a></td>";
         echo "</tr>";
     }
@@ -78,28 +79,29 @@ if(!isset($_SESSION["id"])){
     <div id="StyleModal" class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Add Article</h1>
+        <button type="submit" class="btn btn-primary" onClick="multiAdd()">Add form</button>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <form action="config/articleService.php" method="post">
+      <div id="multiArticle" class="modal-body">
+        <form id="form" action="config/articleService.php" method="post">
             <div>
-                <input type="hidden" name="id" id="id" >
+                <input type="hidden" name="id_1" id="id_1" value="" >
             </div>
           <div class="form-group ">
             <label for="title" class="col-form-label">title</label>
-            <input type="text" class="form-control" name="title" id="title">
+            <input type="text" class="form-control" name="title_1" id="title_1">
           </div>
             <div class="form-group">
                 <label for="author" class="col-form-label">author:</label>
-                <input type="text" class="form-control" name="author" id="author">
+                <input type="text" class="form-control" name="author_1" id="author_1">
         </div>
             <div class="form-group">
                 <label for="content" class="col-form-label">content:</label>
-                <textarea class="form-control" name="content" id="content"></textarea>
+                <textarea class="form-control" name="content_1" id="content_1"></textarea>
             </div>
              <div class="modal-footer">
-            <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" name="create_btn" class="btn btn-primary" id="save_user">Save </button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" name="create_btn"class="btn btn-primary" id="save_user">Save </button>
             <button type="submit" name="update_btn" class="btn btn-primary" id="update_user">Update </button>
             </div>
         </div>
